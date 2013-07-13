@@ -19,6 +19,8 @@ nav a {
 	display: block;
 	color: rgba(249, 249, 249, .9);
 	text-decoration: none;
+	font-family: 'Lato';
+	font-weight: 300 !important;
 	transition: color .5s, background .5s, height .5s;
 }
 
@@ -140,7 +142,7 @@ a, button {
 		position: relative;
 		display: inline-block;
 		margin: 0 auto;
-		padding: 0.4em;
+		padding: 1em;
 		border-radius: 50%;
 		font-style: 1.8em;
 		box-shadow: 0 0 0 0.8em transparent;
@@ -313,4 +315,49 @@ a, button {
 		max-height: 0em;
 		overflow: hidden;
 	}
+	.js .active + ul {
+		max-height: 30em;
+		overflow: hidden;
+		transition: max-height .4s;
+	}
+	.nav li span {
+		display: inline-block;
+		height: 100%;
+	}
+	.nav a {
+		padding: 0.5em;
+	}
+	.icon + span {
+		margin-left: 1em;
+		font-size: 0.8em;
+	}
+
+	/* Adding border lef */
+	.nav li:nth-child(6n+1) {
+		border-left: 8px solid rgb(174, 78, 1);
+	}
+	.nav li:nth-child(6n+2) {
+		border-left: 8px solid rgb(191, 117, 20);
+	}
+	.nav li:nth-child(6n+3) {
+		border-left: 8px solid rgb(13, 111, 150);
+	}
+	.nav li:nth-child(6n+4) {
+		border-left: 8px solid rgb(10, 75, 117);
+	}
+	.nav li:nth-child(6n+5) {
+		border-left: 8px solid rgb(16, 34, 44);
+	}
+	.nav li:nth-child(6n+6) {
+		border-left: 8px solid rgb(9, 18, 25);
+	}
+	.touch .nav a {
+        padding: 0.8em;
+    }
+}
+
+/* Nice box shadow effect */
+.no-touch .nav a:hover i {
+	box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
+	transition: box-shadow .4s ease-in-out;
 }
